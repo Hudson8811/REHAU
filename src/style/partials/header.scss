@@ -1,4 +1,3 @@
-
 .sh-burger {
 	position: relative;
 	display: none;
@@ -48,6 +47,44 @@
 			&::after {
 				transform: rotate(-45deg);
 				background: #323340;
+			}
+		}
+	}
+}
+
+.header{
+	padding-top: 28px;
+	padding-bottom: 28px;
+	&__inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__list{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&-item{
+			font-size: 14px;
+			line-height: 17px;		
+			&:not(:last-child){
+				margin-right: 25px;
+			}
+		}
+	}
+	&__contacts{
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		&-item{
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			>img{
+				margin-right: 10px;
+			}
+			&:not(:last-child){
+				margin-right: 25px;
 			}
 		}
 	}
