@@ -1,0 +1,32 @@
+.container  
+    .info__inner 
+        .info__contacts
+            .info__contacts-info.info-info 
+                h2.info-info__title Контактная информация
+                .info-info__wrap 
+                    .info-info__adress 
+                        span.info-info__adress-subtitle.info-info__subtitle Адрес
+                        span.info-info__adress-name.info-info__name г. Москва, ул. Народная 8, оф. 33
+                    .info-info__phone 
+                        span.info-info__adress-subtitle.info-info__subtitle Телефон
+                        span.info-info__adress-name.info-info__name +7(495) 769-86-28
+                    .info-info__email 
+                        span.info-info__adress-subtitle.info-info__subtitle Email
+                        span.info-info__adress-name.info-info__name reh@email.com
+            .info__contacts-form
+                h2.info__contacts-form__title Закажите бесплатную консультацию
+                form.info-form.info__contacts-form__form
+                    input.info-form__name(placeholder="Имя",type="text")
+                    .info-form__wrap
+                        input.info-form__email(type="text",placeholder="Email")
+                        input.info-form__phone(type="phone",placeholder="Телефон")
+                    textarea.info-form__msg(name="msg",placeholder="Сообщение")
+                    .info-form__checkbox-wrap
+                        input#cb2.info-form__checkbox(type="checkbox", name="", required)
+                        label.info-form__label(for="cb2") 
+                            | Соглашаюсь с 
+                            a(href="#") политикой конфиденциальности
+                        button.info-form__btn Отправить
+                            
+        .info__map 
+        img(src="img/info/map.jpg", alt="")

@@ -1,0 +1,193 @@
+.info{
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background: rgba(2, 9, 40, 0.7);
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contacts{
+        width: 100%;
+        margin-right: 50px;
+        &-form{
+            margin-top: 50px;
+            &__title{
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 36px;
+                color: #FFFFFF;
+            }
+            &__form{
+                margin-top: 35px;
+            }
+        }
+    }
+    &-form{
+        &__name{
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+        }
+        &__email{
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+            margin-right: 30px;
+        }
+        &__phone{
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+        }
+        &__msg{
+            margin-top: 20px;
+            background: #FFF;
+            font-size: 16px;
+            line-height: 150%;
+            color: #1C1C1C;
+            padding: 12px 25px 12px 25px;
+            height: 110px;
+        }
+        &__wrap{
+            margin-top: 20px;
+            display: flex;
+        }
+        &__checkbox{
+            &-wrap{
+                margin-top: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        &__label{
+            color: #fff;
+            font-size: 16px;
+            line-height: 19px;
+            >a{
+                color: #37A58C;
+            }
+        }
+    }
+    &-info{
+        width: 100%;
+        &__wrap{
+            display: flex;
+            background: #FFF;
+            align-items: center;
+            margin-top: 35px;
+            padding: 30px;
+        }
+        &__title{
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 36px;
+            color: #FFFFFF;
+        }
+        &__subtitle{
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 17px;
+            color: #5F5F5F;
+        }
+        &__name{
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: #1C1C1C;
+        }
+        &__adress{
+            display: flex;
+            flex-direction: column;
+            margin-right: 25px;
+        }
+        &__phone{
+            display: flex;
+            flex-direction: column;
+            margin-right: 25px;
+        }
+        &__email{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+input{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
+
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked){
+    
+    position: absolute;
+    left: -9999px;
+}
+
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label{
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ffffff;
+    background-color: #FFF;
+}
+
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before{
+    border-radius: 2px;
+
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after{
+
+    left: 3px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #DD0060;
+    border-bottom: 4px solid #DD0060;
+    transform: rotate(-45deg);
+}
+input[type="checkbox"]:not(:checked) + label:after{
+
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after{
+
+    opacity: 1;
+}
