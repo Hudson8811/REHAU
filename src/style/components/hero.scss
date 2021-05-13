@@ -91,18 +91,44 @@
     &-slider{
         position: relative;
         &__prev{
+            width: 50px;
+            height: 50px;
+            background: #E5E5E5;
             position: absolute;
             z-index: 1;
             left: 100px;
             top: 50%;
             transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            justify-content: center;
+            >img{
+                transform: rotate(90deg);
+            }
+            &:hover{
+                background: $secondary;
+            }
         }
         &__next{
+            width: 50px;
+            height: 50px;
+            background: #E5E5E5;
             position: absolute;
             z-index: 1;
             right: 101px;
             top: 50%;
             transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            >img{
+                transform: rotate(-90deg);
+            }
+            &:hover{
+                background: $secondary;
+            }
         }
         &__pagination{
             position: absolute;

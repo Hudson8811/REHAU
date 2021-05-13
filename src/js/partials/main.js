@@ -4,8 +4,8 @@ $(document).ready(function () {
       draggable: false,
       arrows:true,
       dots: true,
-      prevArrow:'<img class="hero-slider__prev" src="img/hero/arrow_left.png">',
-      nextArrow:'<img class="hero-slider__next" src="img/hero/arrow_right.png">',
+      prevArrow:'<button class="hero-slider__prev"><img src="img/hero/slider-arrow.svg"></button>',
+      nextArrow:'<button class="hero-slider__next"><img src="img/hero/slider-arrow.svg"></button>',
       dotsClass: 'hero-slider__pagination',
       customPaging : function(slider, i) {
          return '<div class="hero-slider__pagin"></div>';
