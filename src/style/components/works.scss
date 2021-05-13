@@ -22,17 +22,52 @@
             bottom: 0;
             left: 0;
             background: #fff;
-            padding: 30px;
             border-left: 6px solid $secondary;
+            &__wrap{
+                padding: 30px;
+                position: relative;
+                overflow: hidden;  
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 200%;
+                    height: 100%;
+                    background: linear-gradient(to right, rgba(221,0,96,1) 0%,rgba(221,0,96,1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%);
+                    transition: left .7s;
+                }
+                &:hover{
+                    &:before{
+                        left: 0;
+                    }
+                    >div{
+                        color: #fff;
+                    }
+                }
+            }
         }
         &-title{
+            position: relative;
             font-weight: bold;
             font-size: 18px;
             line-height: 22px;
+            color: #000;
+            transition: .7s;
+
         }
         &-adress{
+            position: relative;
             font-size: 14px;
             line-height: 17px;
+            color: #000;
+            transition: .7s;
         }
     }
+}
+.wrapper {
+  width: 200px;
+  height: 70px;
+  background-color: black;
+  color: #fff;
 }

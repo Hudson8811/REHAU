@@ -224,11 +224,14 @@ img.fnone {
 }
 .dd .ddChild li .ddlabel {
     color: #5F5F5F;
+    opacity: 1;
+
 }
 .ddlabel {
     font-size: 16px;
     line-height: 19px;
     color: #5F5F5F;
+    opacity: 0.6;
 }
 .dd .ddChild li.hover {
     background-color: #f3f3f3;

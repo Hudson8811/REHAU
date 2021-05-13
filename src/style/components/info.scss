@@ -72,6 +72,9 @@
             line-height: 19px;
             >a{
                 color: #37A58C;
+            &:hover{
+                text-decoration: underline;
+            }
             }
         }
     }

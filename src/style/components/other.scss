@@ -16,6 +16,12 @@
         &:not(:last-child){
             margin-right: 30px;
         }
+        &-price{
+            padding-left: 30px;
+            font-size: 15px;
+            line-height: 135%;
+            color: #262C36;
+        }
         &-name{
             padding: 30px;
             font-weight: bold;
@@ -29,7 +35,7 @@
             align-items: center;
         }
         &-btn{
-            padding: 25px;
+            width: 190px;
         }
     }
     &__list{

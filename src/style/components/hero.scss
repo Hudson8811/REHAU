@@ -82,9 +82,15 @@
             justify-content: space-between;
             align-items: center;
         }
+        &__btn{
+            width: 206px;
+        }
         &__label{
             >a{
                 color: $primary;
+            &:hover{
+                text-decoration: underline;
+            }
             }
         }
     }
@@ -103,6 +109,7 @@
             align-items: center;
             cursor: pointer;
             justify-content: center;
+            transition: 0.3s;
             >img{
                 transform: rotate(90deg);
             }
@@ -123,6 +130,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            transition: 0.3s;
             >img{
                 transform: rotate(-90deg);
             }

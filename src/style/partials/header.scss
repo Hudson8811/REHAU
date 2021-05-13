@@ -66,7 +66,22 @@
 		justify-content: space-between;
 		&-item{
 			font-size: 14px;
-			line-height: 17px;		
+			line-height: 17px;
+			position: relative;
+			&:hover{
+				color: $secondary;
+				&::before{
+					content: '';
+					position: absolute;
+					bottom: -12px;
+					left: 0;
+					height: 1px;
+					background: $secondary;
+					width: 80%;
+	
+				}
+			}
+			
 			&:not(:last-child){
 				margin-right: 25px;
 			}
@@ -85,6 +100,12 @@
 			}
 			&:not(:last-child){
 				margin-right: 25px;
+			}
+			&:last-child{
+				&:hover{
+					color: $primary;
+					text-decoration: underline;
+				}
 			}
 		}
 	}
