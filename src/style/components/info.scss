@@ -32,6 +32,7 @@
                 order: 3;
                 flex-basis: 100%;
             }
+
             &__title{
                 font-weight: bold;
                 font-size: 30px;
@@ -134,8 +135,24 @@
             }
             }
         }
-        &__btn{
-            width: 206px;
+
+        &__btn {
+            max-width: 155px;
+            padding-right: 15px;
+            padding-left: 20px;
+
+            span {
+                position: relative;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 20px;
+
+                img {
+                    transform: rotate(-90deg);
+                }
+            }
         }
     }
 
