@@ -1,0 +1,34 @@
+.hero__slider 
+    .hero__slider.hero-slider  
+        .hero-slider__item 
+            img.hero-slider__item-img(src="img/hero/hero-1.jpg", alt="")
+        .hero-slider__item 
+            img.hero-slider__item-img(src="img/hero/hero-1.jpg", alt="")
+        .hero-slider__item 
+            img.hero-slider__item-img(src="img/hero/hero-1.jpg", alt="")
+        .hero-slider__item 
+            img.hero-slider__item-img(src="img/hero/hero-1.jpg", alt="")
+.container.hero__content
+        .hero__inner
+            .hero__info
+                h1.hero__info-title Занимаемся монтажом труб REHAU вот уже более 5 лет 
+                p.hero__info-text В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг. В нашем портфолио десятки качественных работ и довольных клиентов. В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг.
+                button.hero__info-btn Заказать звонок
+            .hero__form
+                h3.hero__form-title Оставьте заявку на услугу
+                p.hero__form-subtitle И наш специалист свяжется с вами в самое ближайшее время
+                form.hero__form-form.hero-form(action="#") 
+                    input.hero-form__name(placeholder="Ваше имя",type="text")
+                    input.hero-form__phone(placeholder="Ваш телефон",type="phone")
+                    select.hero-form__select(name="dd" id="dd")
+                                option(value="1", disabled, selected, hidden) Какая услуга интересует?
+                                option(value="2") Какая услуга интересует?
+                                option(value="3") Какая услуга интересует?
+                                option(value="4") Какая услуга интересует?
+                    textarea.hero-form__textarea(name="", placeholder="Сообщение")
+                    .hero-form__wrap 
+                        input#cb2.hero-form__checkbox(type="checkbox", name="", required)
+                        label.hero-form__label(for="cb2") 
+                            | Доверяю свои <br>
+                            a(href="#") персональные данные
+                        button.hero-form__btn Отправить

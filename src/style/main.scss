@@ -2,11 +2,14 @@
 @import "partials/fonts.scss";
 @import "partials/jquery.fancybox.min.css";
 @import "partials/slick.css";
+@import "partials/dd"; 
+
+
 
 /* my style */
 
 @import "partials/_var"; 
-
+@import "partials/chexbox"; 
 @import "partials/mixin";
 @import "partials/components";
 @import "partials/header";
