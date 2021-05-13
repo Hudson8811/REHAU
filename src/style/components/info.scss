@@ -53,6 +53,11 @@
             color: #1C1C1C;
             padding: 12px 25px 12px 25px;
             flex-basis: 100%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 30%;
+                margin-top: 0;
+            }
         }
         &__email{
             background: #FFF;
@@ -62,6 +67,11 @@
             padding: 12px 25px 12px 25px;
             margin-top: 20px;
             flex-basis: 48%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 30%;
+                margin-top: 0;
+            }
         }
         &__phone{
             background: #FFF;
@@ -71,6 +81,11 @@
             padding: 12px 25px 12px 25px;
             margin-top: 20px;
             flex-basis: 48%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 30%;
+                margin-top: 0;
+            }
         }
         &__msg{
             margin-top: 20px;
