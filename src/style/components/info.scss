@@ -52,6 +52,15 @@
             color: #1C1C1C;
             padding: 12px 25px 12px 25px;
             flex-basis: 100%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 32%;
+                margin-top: 0;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+            }
         }
         &__email{
             background: #FFF;
@@ -61,6 +70,16 @@
             padding: 12px 25px 12px 25px;
             margin-top: 20px;
             flex-basis: 48%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 32%;
+                margin-top: 0;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+                margin-top: 20px;
+            }
         }
         &__phone{
             background: #FFF;
@@ -70,6 +89,16 @@
             padding: 12px 25px 12px 25px;
             margin-top: 20px;
             flex-basis: 48%;
+
+            @media (max-width: 1300px) {
+                flex-basis: 32%;
+                margin-top: 0;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+                margin-top: 20px;
+            }
         }
         &__msg{
             margin-top: 20px;
@@ -118,6 +147,10 @@
             align-items: center;
             margin-top: 35px;
             padding: 30px;
+
+            @include tablet {
+                flex-wrap: wrap;
+            }
         }
         &__title{
             font-weight: bold;
@@ -141,6 +174,11 @@
             display: flex;
             flex-direction: column;
             margin-right: 25px;
+
+            @include mobile {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
         }
         &__phone{
             display: flex;
@@ -164,7 +202,21 @@
             margin-left: 0;
             margin: 30px 0 0 0;
             order: 2;
-            max-height: 290px;
+            height: 350px;
+        }
+
+        @include tablet {
+            height: 290px;
+        }
+
+        iframe {
+            @media (max-width: 1300px) {
+                height: 350px;
+            }
+
+            @include tablet {
+                height: 290px;
+            }
         }
 
         img {
