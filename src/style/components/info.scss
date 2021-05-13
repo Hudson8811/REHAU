@@ -4,13 +4,35 @@
     background: rgba(2, 9, 40, 0.7);
     &__inner{
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media (max-width: 1300px) {
+            flex-direction: column;
+        }
     }
     &__contacts{
         width: 100%;
-        margin-right: 50px;
+
+        &-info {
+            flex-basis: 48.9%;
+            margin-right: 50px;
+
+            @media (max-width: 1300px) {
+                order: 1;
+                margin-right: 0;
+                flex-basis: 100%;
+            }
+        }
+
         &-form{
             margin-top: 50px;
+            flex-basis: 48.9%;
+
+            @media (max-width: 1300px) {
+                order: 3;
+                flex-basis: 100%;
+            }
+
             &__title{
                 font-weight: bold;
                 font-size: 30px;
@@ -22,6 +44,7 @@
             }
         }
     }
+
     &-form{
         &__name{
             background: #FFF;
@@ -29,6 +52,7 @@
             line-height: 150%;
             color: #1C1C1C;
             padding: 12px 25px 12px 25px;
+            flex-basis: 100%;
         }
         &__email{
             background: #FFF;
@@ -36,7 +60,8 @@
             line-height: 150%;
             color: #1C1C1C;
             padding: 12px 25px 12px 25px;
-            margin-right: 30px;
+            margin-top: 20px;
+            flex-basis: 48%;
         }
         &__phone{
             background: #FFF;
@@ -44,6 +69,8 @@
             line-height: 150%;
             color: #1C1C1C;
             padding: 12px 25px 12px 25px;
+            margin-top: 20px;
+            flex-basis: 48%;
         }
         &__msg{
             margin-top: 20px;
@@ -57,6 +84,8 @@
         &__wrap{
             margin-top: 20px;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         &__checkbox{
             &-wrap{
@@ -75,6 +104,7 @@
             }
         }
     }
+
     &-info{
         width: 100%;
         &__wrap{
@@ -115,6 +145,26 @@
         &__email{
             display: flex;
             flex-direction: column;
+        }
+    }
+
+    &__map {
+        flex-basis: 47.5%;
+        margin-left: 3.6%;
+        margin-top: -178px;
+
+        @media (max-width: 1300px) {
+            flex-basis: 100%;
+            margin-top: 30px;
+            margin-left: 0;
+            margin: 30px 0 0 0;
+            order: 2;
+            max-height: 290px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
         }
     }
 }
