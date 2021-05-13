@@ -97,4 +97,5 @@ $(document).ready(function () {
   } catch (e) {
       alert(e.message);
   }
+  // $("a.grouped_elements").fancybox();
 });

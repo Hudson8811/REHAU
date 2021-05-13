@@ -57,7 +57,7 @@
                 </select>
                 <textarea class="hero-form__textarea" name="" placeholder="Сообщение"></textarea>
                 <div class="hero-form__wrap"> 
-                  <input class="hero-form__checkbox" id="cb2" type="checkbox" name="" required>
+                  <input class="hero-form__checkbox" id="cb2" type="checkbox" name="cb2" required>
                   <label class="hero-form__label" for="cb2">
                      Доверяю свои <br><a href="#">персональные данные</a></label>
                   <button class="hero-form__btn btn"> 
@@ -157,20 +157,28 @@
           <h2 class="video__title title">Видео</h2>
           <div class="video__inner">
             <div class="video__big">
-              <div class="video__item-info"> </div>
-              <div class="video__item-video"> 
+              <div class="video__item-info"> 
+                <div class="video"></div>
+              </div>
+              <div class="video__item-video">
                 <iframe src="https://www.youtube.com/embed/G1DsbIwXOb0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
             <div class="video__wrapper"> 
               <div class="video__item"> 
-                <div class="video__item-info"> </div>
+                <div class="video__item-info"> 
+                  <div class="video__item-name">Монтаж водоснабжения</div>
+                  <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                </div>
                 <div class="video__item-video"> 
                   <iframe src="https://www.youtube.com/embed/G1DsbIwXOb0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="video__item"> 
-                <div class="video__item-info"> </div>
+                <div class="video__item-info"> 
+                  <div class="video__item-name">Монтаж водоснабжения</div>
+                  <div class="video__item-text">г. Москва, Ленинский проспект 77к1</div>
+                </div>
                 <div class="video__item-video"> 
                   <iframe src="https://www.youtube.com/embed/G1DsbIwXOb0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
@@ -285,10 +293,13 @@
                 </div>
                 <textarea class="info-form__msg" name="msg" placeholder="Сообщение"></textarea>
                 <div class="info-form__checkbox-wrap">
-                  <input class="info-form__checkbox" id="cb2" type="checkbox" name="" required>
-                  <label class="info-form__label" for="cb2">
+                  <input class="info-form__checkbox" id="cb1" type="checkbox" name="cb1" required>
+                  <label class="info-form__label" for="cb1">
                      Соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
-                  <button class="info-form__btn">Отправить</button>
+                  <button class="info-form__btn btn"> 
+                    <div class="btn__content">
+                       Отправить<img src="img/btn-arrow.svg" alt=""></div>
+                  </button>
                 </div>
               </form>
             </div>
