@@ -26,6 +26,12 @@
   }
 }
 
+@mixin media-1300 {
+  @media (max-width: 1300px) {
+      @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: 1024px) {
       @content;
