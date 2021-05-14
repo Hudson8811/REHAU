@@ -13,8 +13,28 @@
             width: 446px;
             height: 322px;
             flex-basis: 32%;
+            @include tablet{
+                flex-basis: 49%;
+            }
+            @include mobile{
+                flex-basis: 100%;
+                margin-bottom: 10px;
+            }
             &:nth-child(-n+3){
                 margin-bottom: 32px;
+                @include tablet{
+                    margin-bottom: 20px;
+                }
+                @include mobile{
+                    margin-bottom: 10px;
+                }
+            }
+            &-link{
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         &-img{}
         &-info{
@@ -62,6 +82,7 @@
             line-height: 17px;
             color: #000;
             transition: .7s;
+            margin-top: 9px;
         }
     }
 }

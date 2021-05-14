@@ -16,6 +16,9 @@
         @include media-1400{
             flex-basis: 49%;
         }
+        @include mobile{
+            flex-basis: 100%;
+        }
         &-wrap{
             display: flex;
             align-items: flex-start;

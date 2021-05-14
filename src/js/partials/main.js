@@ -33,5 +33,15 @@ $(document).ready(function () {
       $(videos).eq(idx).attr('src', src + '?autoplay=1');
     })
   })
+  $('.works__item-link').fancybox()
+
+  $('.video__slider').slick({
+    draggable: false,
+    arrows:true,
+    dots: false,
+    adaptiveHeight: true,
+    prevArrow:'<button class="hero-slider__prev"><img src="img/hero/slider-arrow.svg"></button>',
+    nextArrow:'<button class="hero-slider__next"><img src="img/hero/slider-arrow.svg"></button>',
+ });
 });
 
