@@ -181,6 +181,10 @@ img.fnone {
     border-right: 1px solid #fff;
     right: 24px;
     padding: 15px;
+
+    @media (max-width: 1024px) {
+        padding: 5px;
+    }
 }
 .dd .ddArrow {
     width: 16px;
@@ -188,6 +192,11 @@ img.fnone {
     margin-top: -8px;
     margin-right: 31px;
     background: url(../img/hero/dd-arrow.svg) no-repeat;
+
+    @media (max-width: 1024px) {
+        margin-top: -11px;
+        margin-right: 22px;
+    }
 }
 .dd .ddArrow:hover {
     background-position: 0 100%;

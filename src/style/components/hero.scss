@@ -1,11 +1,20 @@
 .hero{
     position: relative;
+
+    @include mobile {
+        height: 400px;
+    }
     &__inner{
         display: flex;
         padding-top: 137px;
         padding-bottom: 137px;
         justify-content: space-between;
         align-items: center;
+
+        @include mobile {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
     }
     &__info{
         width: 463px;
@@ -14,6 +23,10 @@
             width: 380px;
             margin-right: 25px;
             flex-shrink: 0;
+        }
+
+        @include tablet {
+            flex-shrink: 1;
         }
 
         &-title{
@@ -25,6 +38,11 @@
             @include tablet {
                 font-size: 24px;
                 line-height: 29px;
+            }
+
+            @include mobile {
+                font-size: 20px;
+                line-height: 24px;
             }
         }
         &-text{
@@ -39,6 +57,15 @@
         }
         &-btn{
             margin-top: 50px;
+            width: 249px;
+            
+            @include tablet {
+                width: 187px;
+            }
+
+            @include mobile {
+                margin-top: 25px;
+            }
         }
     }
     &__form{
@@ -51,6 +78,11 @@
             padding: 55px 40px;
             width: 403px;
         }
+
+        @include mobile {
+            display: none;
+        }
+
         &-title{
             font-weight: bold;
             font-size: 30px;
@@ -132,6 +164,7 @@
                 height: 100px;
                 font-size: 12px;
                 line-height: 14px;
+                padding: 12px 25px;
             }
         }
         &__wrap{
@@ -145,7 +178,7 @@
             }
 
             @include tablet {
-                margin-top: 23px;
+                margin-top: 18px;
             }
         }
         &__btn{
@@ -187,6 +220,10 @@
         position: relative;
         >.slick-list{
             height: 880px !important;
+
+            @include mobile {
+                height: 400px !important;
+            }
         }
         &__prev{
             width: 50px;
@@ -216,7 +253,7 @@
             }
 
             @include media-1400 {
-                bottom: 0;
+                bottom: 9px;
                 left: 100px;
                 top: auto;
             }
@@ -224,6 +261,10 @@
             @include tablet {
                 height: 40px;
                 width: 40px;
+            }
+
+            @include mobile {
+                display: none;
             }
         }
         &__next{
@@ -252,7 +293,7 @@
             }
 
             @include media-1400 {
-                bottom: 0;
+                bottom: 9px;
                 top: auto;
                 right: 100px;
             }
@@ -260,6 +301,10 @@
             @include tablet {
                 height: 40px;
                 width: 40px;
+            }
+
+            @include mobile {
+                display: none;
             }
         }
         &__pagination{
@@ -309,8 +354,8 @@
             max-width: calc(100% - 100px * 2); 
         }
 
-        @include tablet {
-            max-width: calc(100% - 85px * 2);
+        @include mobile {
+            max-width: calc(100% - 20px * 2); 
         }
     }
 }
