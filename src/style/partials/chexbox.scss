@@ -8,10 +8,8 @@ input[type="checkbox"]:not(:checked){
 
 input[type="checkbox"]:checked + label,
 input[type="checkbox"]:not(:checked) + label{
-    display: inline-block;
     position: relative;
     padding-left: 28px;
-    line-height: 20px;
     cursor: pointer;
 }
 

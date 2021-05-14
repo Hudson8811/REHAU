@@ -9,17 +9,33 @@
     }
     &__info{
         width: 463px;
+
+        @include media-1400 {
+            width: 380px;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+
         &-title{
             font-weight: bold;
             font-size: 30px;
             line-height: 36px;
             color: #FFFFFF;
+
+            @include tablet {
+                font-size: 24px;
+                line-height: 29px;
+            }
         }
         &-text{
             margin-top: 26px;
             font-size: 14px;
             line-height: 17px;
             color: #FAFAFA;
+
+            @include media-1400 {
+                max-width: 350px;
+            }
         }
         &-btn{
             margin-top: 50px;
@@ -30,17 +46,41 @@
         border: 1px solid #37A58C;
         padding: 55px;
         width: 573px;
+
+        @include tablet {
+            padding: 55px 40px;
+            width: 403px;
+        }
         &-title{
             font-weight: bold;
             font-size: 30px;
             line-height: 36px;
             color: #1C1C1C;
+
+            @include media-1400 {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            @include tablet {
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+            }
         }
         &-subtitle{
             margin-top: 26px;
             font-size: 14px;
             line-height: 17px;
             color: #1C1C1C;
+
+            @include media-1400 {
+                margin-top: 15px;
+            }
+
+            @include tablet {
+                text-align: center;
+            }
         }
         &-form{
             margin-top: 35px;
@@ -55,6 +95,12 @@
             line-height: 19px;
             color: #5F5F5F;
             border: 1px solid #E5E5E5;
+
+            @include tablet {
+                padding: 12px 25px;
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
         &__phone{
             margin-top: 20px;
@@ -65,6 +111,12 @@
             line-height: 19px;
             color: #5F5F5F;
             border: 1px solid #E5E5E5;
+
+            @include tablet {
+                padding: 12px 25px;
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
         &__textarea{
             margin-top: 20px;
@@ -75,22 +127,59 @@
             line-height: 19px;
             color: #5F5F5F;
             border: 1px solid #E5E5E5;
+
+            @include tablet {
+                height: 100px;
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
         &__wrap{
             margin-top: 35px;
             display: flex;  
             justify-content: space-between;
             align-items: center;
+
+            @include tablet {
+                flex-wrap: wrap;
+            }
+
+            @include tablet {
+                margin-top: 23px;
+            }
         }
         &__btn{
             width: 206px;
+
+            @include tablet {
+                margin-top: 29px;
+                width: 155px;
+            }
         }
         &__label{
-            >a{
+            line-height: 20px;
+            display: inline-block;
+            flex-shrink: 0;
+
+            >a {
                 color: $primary;
-            &:hover{
-                text-decoration: underline;
+                &:hover{
+                    text-decoration: underline;
+                }
+
+                @include tablet {
+                    margin-left: 3px;
+                }
             }
+
+            @include media-1400 {
+                margin-right: 10px;
+            }
+
+            @include tablet {
+                font-size: 12px;
+                line-height: 14px;
+                display: flex;
             }
         }
     }
@@ -113,11 +202,28 @@
             cursor: pointer;
             justify-content: center;
             transition: 0.3s;
+
             >img{
                 transform: rotate(90deg);
             }
+
             &:hover{
                 background: $secondary;
+            }
+
+            @media (max-width: 1650px) {
+                left: 50px; 
+            }
+
+            @include media-1400 {
+                bottom: 0;
+                left: 100px;
+                top: auto;
+            }
+
+            @include tablet {
+                height: 40px;
+                width: 40px;
             }
         }
         &__next{
@@ -139,6 +245,21 @@
             }
             &:hover{
                 background: $secondary;
+            }
+
+            @media (max-width: 1650px) {
+                right: 50px;
+            }
+
+            @include media-1400 {
+                bottom: 0;
+                top: auto;
+                right: 100px;
+            }
+
+            @include tablet {
+                height: 40px;
+                width: 40px;
             }
         }
         &__pagination{
@@ -178,6 +299,19 @@
         left: 0;
         right: 0;
         bottom: 0;
+        max-width: calc(100% - 260px * 2);
+
+        @media (max-width: 1650px) {
+            max-width: calc(100% - 150px * 2); 
+        }
+
+        @include media-1400 {
+            max-width: calc(100% - 100px * 2); 
+        }
+
+        @include tablet {
+            max-width: calc(100% - 85px * 2);
+        }
     }
 }
 .slick{

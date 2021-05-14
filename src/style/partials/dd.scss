@@ -197,6 +197,12 @@ img.fnone {
 }
 .dd .ddTitle .ddTitleText {
     padding: 15px 35px;
+
+    @media (max-width: 1024px) {
+        padding: 12px 25px;
+        display: flex;
+        align-items: center;
+    }
 }
 .dd .ddTitle .ddTitleText .ddTitleText {
     padding: 0;
@@ -218,6 +224,10 @@ img.fnone {
     background-color: #fff; 
     border-bottom: 1px solid #c3c3c3; 
     padding: 15px 36px;
+
+    @media (max-width: 1024px) {
+        padding: 13px 25px;
+    }
 }
 .dd .ddChild li .description {
     color: #666;
@@ -232,6 +242,11 @@ img.fnone {
     line-height: 19px;
     color: #5F5F5F;
     opacity: 0.6;
+
+    @media (max-width: 1024px) {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 .dd .ddChild li.hover {
     background-color: #f3f3f3;
