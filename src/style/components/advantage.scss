@@ -12,6 +12,9 @@
         flex-direction: column;
         width: 308px;
         height: 170px;
+        @include media-1400{
+            flex-basis: 49%;
+        }
         &-wrap{
             display: flex;
             align-items: flex-start;
