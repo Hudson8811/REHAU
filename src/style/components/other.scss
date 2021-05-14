@@ -5,6 +5,10 @@
         display: flex;
         align-items: center;
         margin-top: 50px;
+        
+        @include tablet {
+            flex-direction: column;
+        }
     }
     &__item{
         max-width: 447px;
@@ -13,34 +17,107 @@
         background: #FFFFFF;
         display: flex;
         flex-direction: column;
+
         &:not(:last-child){
             margin-right: 30px;
+
+            @include tablet {
+                margin-right: 0;
+            }
         }
+
+        @include tablet {
+            flex-direction: row;
+            max-width: 100%;
+            min-height: 331px;
+        }
+
+        @media (max-width: 870px) {
+            flex-direction: column;
+        }
+
+        &:not(:first-child) {
+
+            @include tablet {
+                margin-top: 20px;
+            }
+        }
+
         &-price{
             padding-left: 30px;
             font-size: 15px;
             line-height: 135%;
             font-weight: bold;
             color: #262C36;
+
+            @include tablet {
+                flex-shrink: 0;
+                margin-right: 15px;
+            }
         }
+
+        &-img {
+            @include tablet {
+                width: 401px;
+                object-fit: cover;
+                min-height: 339px;
+            }
+
+            @media (max-width: 870px) {
+                width: 100%;
+            }
+
+            @media (max-width: 450px) {
+                min-height: 0;
+                height: 210px;
+            }
+        }
+
         &-name{
             padding: 30px;
             font-weight: bold;
             font-size: 20px;
             line-height: 24px;
+
+            @include tablet {
+                display: none;
+            }
+
+            &--tablet {
+                display: none;
+
+                @include tablet {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
         }
         &-info{
-            margin-top: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 391px;
+                
+                @include tablet {
+                    min-height: 331px;
+                }
+            }
         }
         &-btn{
             width: 190px;
         }
     }
     &__list{
-        padding: 30px 50px 0px 50px;
+        padding: 30px 50px 35px 50px;
+
+        @include tablet {
+            padding: 0 50px 35px;
+        }
         &-item{
             color: #37A58C;
             &:not(:first-child){

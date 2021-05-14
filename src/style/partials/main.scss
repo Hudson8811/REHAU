@@ -76,6 +76,11 @@ html,body{
 	margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+	.container {
+		max-width: calc(100% - 100px * 2);
+	}
+}
 @media screen and (max-width: 550px) {
 	.container {
 		max-width: calc(100% - 15px * 2);
