@@ -34,14 +34,38 @@ $(document).ready(function () {
     })
   })
   $('.works__item-link').fancybox()
-
+  let videoSlider
   $('.video__slider').slick({
     draggable: false,
     arrows:true,
-    dots: false,
+    dots: true,
+    infinite: false,
     adaptiveHeight: true,
-    prevArrow:'<button class="hero-slider__prev"><img src="img/hero/slider-arrow.svg"></button>',
-    nextArrow:'<button class="hero-slider__next"><img src="img/hero/slider-arrow.svg"></button>',
+    prevArrow:'<button class="video-slider__prev"><img src="img/hero/slider-arrow.svg"></button>',
+    nextArrow:'<button class="video-slider__next"><img src="img/hero/slider-arrow.svg"></button>',
+    dotsClass: 'video-slider__pagination',
+    customPaging : function(slider, i) {
+      videoSlider = slider
+      return `<span class="video-slider__dot">${(i + 1)}</span>/${slider.slideCount}`;
+    }
  });
+ const videoDot = $('.video-slider__dot').eq(0)
+ let videoDotCount = parseInt($(videoDot).text())
+ $('.video-slider__next').on('click', () => {
+  if (videoDotCount !== videoSlider.slideCount) {
+    $(videoDot).text(++videoDotCount)
+  } else {
+    return
+  }
+ })
+
+ $('.video-slider__prev').on('click', () => {
+ if (videoDotCount !== 1) {
+   $(videoDot).text(--videoDotCount)
+ } else {
+   return
+ }
+})
+
 });
 
