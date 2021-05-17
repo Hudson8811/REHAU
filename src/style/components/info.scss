@@ -48,6 +48,10 @@
                 flex-basis: 100%;
             }
 
+            @include tablet {
+                margin-top: 45px;
+            }
+
             @include mobile {
                 order: 1;
                 margin-top: 0;
@@ -58,6 +62,11 @@
                 font-size: 30px;
                 line-height: 36px;
                 color: #FFFFFF;
+
+                @include tablet {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
 
                 @include mobile {
                     font-size: 20px;
@@ -84,6 +93,11 @@
                 margin-top: 0;
             }
 
+            @include tablet {
+                font-size: 12px;
+                line-height: 150%;
+            }
+
             @include mobile {
                 flex-basis: 100%;
             }
@@ -100,6 +114,11 @@
             @media (max-width: 1300px) {
                 flex-basis: 32%;
                 margin-top: 0;
+            }
+
+            @include tablet {
+                font-size: 12px;
+                line-height: 150%;
             }
 
             @include mobile {
@@ -121,6 +140,11 @@
                 margin-top: 0;
             }
 
+            @include tablet {
+                font-size: 12px;
+                line-height: 150%;
+            }
+
             @include mobile {
                 flex-basis: 100%;
                 margin-top: 20px;
@@ -134,6 +158,12 @@
             color: #1C1C1C;
             padding: 12px 25px 12px 25px;
             height: 110px;
+
+            @include tablet {
+                font-size: 12px;
+                line-height: 150%;
+                height: 80px;
+            }
         }
         &__wrap{
             margin-top: 20px;
@@ -148,6 +178,10 @@
                 align-items: center;
                 justify-content: space-between;
 
+                @include tablet {
+                    margin-top: 30px;
+                }
+
                 @include mobile {
                     flex-direction: column;
                     align-items: flex-start;
@@ -159,6 +193,7 @@
             color: #fff;
             font-size: 16px;
             line-height: 19px;
+
             >a{
                 color: #37A58C;
                 &:hover{
@@ -166,8 +201,13 @@
                 }
             }
 
+            @include tablet {
+                font-size: 11px;
+                line-height: 17px;
+            }
+
             @include mobile {
-                margin-bottom: 20px;
+                
             }
         }
 
@@ -175,6 +215,10 @@
             max-width: 155px;
             padding-right: 15px;
             padding-left: 20px;
+
+            @include tablet {
+                margin-top: 20px;
+            }
 
             span {
                 position: relative;
@@ -198,7 +242,7 @@
             background: #FFF;
             align-items: center;
             margin-top: 35px;
-            padding: 30px;
+            padding: 20px;
 
             @include tablet {
                 flex-wrap: wrap;
@@ -209,6 +253,11 @@
             font-size: 30px;
             line-height: 36px;
             color: #FFFFFF;
+
+            @include tablet {
+                font-size: 24px;
+                line-height: 29px;
+            }
 
             @include mobile {
                 font-size: 20px;
@@ -221,7 +270,7 @@
             line-height: 17px;
             color: #5F5F5F;
 
-            @include mobile {
+            @include tablet {
                 font-size: 12px;
                 line-height: 14px;
             }
@@ -232,7 +281,7 @@
             line-height: 19px;
             color: #1C1C1C;
 
-            @include mobile {
+            @include tablet {
                 font-size: 12px;
                 line-height: 14px;
             }
@@ -241,29 +290,22 @@
             display: flex;
             flex-direction: column;
             margin-right: 25px;
-
-            @include mobile {
-                margin-right: 0;
-            }
+            align-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         &__phone{
             display: flex;
             flex-direction: column;
             margin-right: 25px;
-
-            @media (max-width: 350px) {
-                margin-top: 20px;
-                margin-right: 20px;
-            }
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         &__email{
             display: flex;
             flex-direction: column;
-
-            @media (max-width: 350px) {
-                margin-top: 20px;
-                margin-right: 0;
-            }
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
 
@@ -288,6 +330,7 @@
 
         @include tablet {
             height: 290px;
+            margin-top: 27px;
         }
 
         @include mobile {

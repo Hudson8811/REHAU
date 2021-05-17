@@ -14,7 +14,7 @@
     
     &__inner{
         display: flex;
-        align-items: center;
+        align-items: stretch;
         margin-top: 50px;
         
         @include tablet {
@@ -27,7 +27,6 @@
     }
     &__item{
         max-width: 447px;
-        min-height: 810px;
         border-top: 5px solid #DD0060;
         background: #FFFFFF;
         display: flex;
@@ -64,6 +63,7 @@
             line-height: 135%;
             font-weight: bold;
             color: #262C36;
+            flex-shrink: 0;
 
             @include tablet {
                 flex-shrink: 0;
@@ -103,6 +103,10 @@
                 display: none;
             }
 
+            @media (max-width: 870px) {
+                display: block;
+            }
+
             @include mobile {
                 display: block;
                 font-size: 14px;
@@ -115,10 +119,9 @@
 
                 @include tablet {
                     display: flex;
-                    flex-direction: column;
                 }
 
-                @include mobile {
+                @media (max-width: 870px) {
                     display: none;
                 }
             }
@@ -137,19 +140,12 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                min-height: 391px;
-                
-                @include tablet {
-                    min-height: 331px;
-                }
-
-                @include mobile {
-                    min-height: 280px;
-                }
+                height: 100%;
             }
         }
         &-btn{
             width: 190px;
+            margin-left: 20px;
 
             @include mobile {
                 width: 145px;
