@@ -1,18 +1,32 @@
 .other{
     padding-top: 56px;
     padding-bottom: 112px;
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
     &__inner{
         display: flex;
-        align-items: center;
+        align-items: stretch;
         margin-top: 50px;
         
         @include tablet {
             flex-direction: column;
         }
+
+        @include mobile {
+            margin-top: 30px;
+        }
     }
     &__item{
         max-width: 447px;
-        min-height: 810px;
         border-top: 5px solid #DD0060;
         background: #FFFFFF;
         display: flex;
@@ -49,10 +63,16 @@
             line-height: 135%;
             font-weight: bold;
             color: #262C36;
+            flex-shrink: 0;
 
             @include tablet {
                 flex-shrink: 0;
                 margin-right: 15px;
+            }
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 135%;
             }
         }
 
@@ -83,12 +103,26 @@
                 display: none;
             }
 
+            @media (max-width: 870px) {
+                display: block;
+            }
+
+            @include mobile {
+                display: block;
+                font-size: 14px;
+                line-height: 17px;
+                padding: 17px 20px 17px;
+            }
+
             &--tablet {
                 display: none;
 
                 @include tablet {
                     display: flex;
-                    flex-direction: column;
+                }
+
+                @media (max-width: 870px) {
+                    display: none;
                 }
             }
         }
@@ -97,26 +131,32 @@
             justify-content: space-between;
             align-items: center;
 
+            @include mobile {
+                font-size: 12px;
+                line-height: 135%;
+            }
+
             &-wrapper {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                min-height: 391px;
-                
-                @include tablet {
-                    min-height: 331px;
-                }
+                height: 100%;
             }
         }
         &-btn{
             width: 190px;
+            margin-left: 20px;
+
+            @include mobile {
+                width: 145px;
+            }
         }
     }
     &__list{
         padding: 30px 50px 35px 50px;
 
         @include tablet {
-            padding: 0 50px 35px;
+            padding: 30px 30px 30px 50px;
         }
         &-item{
             color: #37A58C;
@@ -125,9 +165,15 @@
             }
             >span{
                 color: #1C1C1C;
-                font-size: 14px;
+                font-size: 16px;
                 line-height: 19px;
+
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
+
         }
     }
 }
