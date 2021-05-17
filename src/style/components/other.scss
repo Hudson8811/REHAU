@@ -1,6 +1,17 @@
 .other{
     padding-top: 56px;
     padding-bottom: 112px;
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
     &__inner{
         display: flex;
         align-items: center;
@@ -8,6 +19,10 @@
         
         @include tablet {
             flex-direction: column;
+        }
+
+        @include mobile {
+            margin-top: 30px;
         }
     }
     &__item{
@@ -54,6 +69,11 @@
                 flex-shrink: 0;
                 margin-right: 15px;
             }
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 135%;
+            }
         }
 
         &-img {
@@ -83,6 +103,13 @@
                 display: none;
             }
 
+            @include mobile {
+                display: block;
+                font-size: 14px;
+                line-height: 17px;
+                padding: 17px 20px 17px;
+            }
+
             &--tablet {
                 display: none;
 
@@ -90,12 +117,21 @@
                     display: flex;
                     flex-direction: column;
                 }
+
+                @include mobile {
+                    display: none;
+                }
             }
         }
         &-info{
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 135%;
+            }
 
             &-wrapper {
                 display: flex;
@@ -106,17 +142,25 @@
                 @include tablet {
                     min-height: 331px;
                 }
+
+                @include mobile {
+                    min-height: 280px;
+                }
             }
         }
         &-btn{
             width: 190px;
+
+            @include mobile {
+                width: 145px;
+            }
         }
     }
     &__list{
         padding: 30px 50px 35px 50px;
 
         @include tablet {
-            padding: 0 50px 35px;
+            padding: 30px 30px 30px 50px;
         }
         &-item{
             color: #37A58C;
@@ -127,7 +171,13 @@
                 color: #1C1C1C;
                 font-size: 14px;
                 line-height: 19px;
+
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
+
         }
     }
 }

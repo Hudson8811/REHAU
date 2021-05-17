@@ -2,6 +2,16 @@
     padding-top: 112px;
     padding-bottom: 112px;
     background: rgba(2, 9, 40, 0.7);
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
     &__inner{
         display: flex;
         flex-wrap: wrap;
@@ -22,6 +32,11 @@
                 margin-right: 0;
                 flex-basis: 100%;
             }
+
+            @include mobile {
+                order: 2;
+                margin-top: 50px;
+            }
         }
 
         &-form{
@@ -33,11 +48,21 @@
                 flex-basis: 100%;
             }
 
+            @include mobile {
+                order: 1;
+                margin-top: 0;
+            }
+
             &__title{
                 font-weight: bold;
                 font-size: 30px;
                 line-height: 36px;
                 color: #FFFFFF;
+
+                @include mobile {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
             &__form{
                 margin-top: 35px;
@@ -122,6 +147,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                @include mobile {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-top: 23px;
+                }
             }
         }
         &__label{
@@ -130,9 +161,13 @@
             line-height: 19px;
             >a{
                 color: #37A58C;
-            &:hover{
-                text-decoration: underline;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
+
+            @include mobile {
+                margin-bottom: 20px;
             }
         }
 
@@ -174,18 +209,33 @@
             font-size: 30px;
             line-height: 36px;
             color: #FFFFFF;
+
+            @include mobile {
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
         &__subtitle{
             margin-bottom: 10px;
             font-size: 14px;
             line-height: 17px;
             color: #5F5F5F;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
         &__name{
             font-weight: bold;
             font-size: 16px;
             line-height: 19px;
             color: #1C1C1C;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
         &__adress{
             display: flex;
@@ -193,18 +243,27 @@
             margin-right: 25px;
 
             @include mobile {
-                flex-basis: 100%;
-                margin-bottom: 20px;
+                margin-right: 0;
             }
         }
         &__phone{
             display: flex;
             flex-direction: column;
             margin-right: 25px;
+
+            @media (max-width: 350px) {
+                margin-top: 20px;
+                margin-right: 20px;
+            }
         }
         &__email{
             display: flex;
             flex-direction: column;
+
+            @media (max-width: 350px) {
+                margin-top: 20px;
+                margin-right: 0;
+            }
         }
     }
 
@@ -222,8 +281,17 @@
             height: 350px;
         }
 
+        @include mobile {
+            order: 3;
+            margin-top: 10px;
+        }
+
         @include tablet {
             height: 290px;
+        }
+
+        @include mobile {
+            width: 100%;
         }
 
         iframe {
