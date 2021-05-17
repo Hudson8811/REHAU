@@ -346,15 +346,15 @@
             </div>
             <div class="info__contacts-form">
               <h2 class="info__contacts-form__title">Закажите бесплатную консультацию</h2>
-              <form class="info-form info__contacts-form__form">
+              <form class="info-form info__contacts-form__form js-form">
                 <div class="info-form__wrap">
-                  <input class="info-form__name" placeholder="Ваше имя" type="text">
-                  <input class="info-form__email" type="text" placeholder="Email">
-                  <input class="info-form__phone" type="phone" placeholder="Телефон">
+                  <input class="info-form__name" placeholder="Ваше имя" type="text" data-validate-field="name">
+                  <input class="info-form__email" type="text" placeholder="Email" data-validate-field="email">
+                  <input class="info-form__phone" type="phone" placeholder="Телефон" data-validate-field="phone">
                 </div>
-                <textarea class="info-form__msg" name="msg" placeholder="Сообщение"></textarea>
+                <textarea class="info-form__msg" name="msg" placeholder="Сообщение" data-validate-field="text"></textarea>
                 <div class="info-form__checkbox-wrap">
-                  <input class="info-form__checkbox" id="cb1" type="checkbox" name="cb1" required>
+                  <input class="info-form__checkbox" id="cb1" type="checkbox" name="cb1" data-validate-field="checkbox">
                   <label class="info-form__label" for="cb1">
                      Соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
                   <button class="info-form__btn btn"> 

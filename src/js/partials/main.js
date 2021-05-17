@@ -1,5 +1,4 @@
 $(document).ready(function () {
-   // $("input[name='phone']").mask(" +7 (999) 999-99-99")
    $('.hero-slider').slick({
       draggable: false,
       arrows:true,
@@ -66,6 +65,39 @@ $(document).ready(function () {
    return
  }
 })
+
+  if (document.querySelector('.js-form')) {
+      new JustValidate('.js-form', {
+          rules: {
+            checkbox: {
+              required: true
+            },
+            email: {
+              required: true,
+              email: true
+            },
+            name: {
+              required: true,
+              minLength: 2
+            },
+            phone:{
+              required: true,
+              phone: '123-123-123'
+            },
+            text:{
+              required: true,
+
+            },
+          messages: {
+            name: {
+              minLength: 'My custom message about only minLength rule'
+            },
+            email: 'My custom message about error (one error message for all rules)'
+          },  
+          },
+      })
+  }
+
 
 });
 

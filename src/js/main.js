@@ -4,6 +4,7 @@
 //= libs/jquery.fancybox.min.js
 //= libs/slick.min.js
 //= libs/dd.min.js
+//= libs/just-validate.min.js
 
 
 /* my scripts */

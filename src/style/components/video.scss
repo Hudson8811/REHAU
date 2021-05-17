@@ -130,9 +130,13 @@
         }
     }
     &__slider{
+        display: none;
         margin-top: 30px;
         >div.slick-list{
             height: 340px !important;
+        }
+        @include mobile{
+            display: block;
         }
     }
     &-slider{
