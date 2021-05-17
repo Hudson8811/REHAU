@@ -5,6 +5,7 @@
 //= libs/slick.min.js
 //= libs/dd.min.js
 //= libs/just-validate.min.js
+//= libs/masonry.min.js
 
 
 /* my scripts */
