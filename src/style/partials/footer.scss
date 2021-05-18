@@ -4,6 +4,7 @@
 	&__inner{
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 
 		@include media-1300 {
 			flex-wrap: wrap;
@@ -16,10 +17,13 @@
 	}
 
 	&-nav {
+		margin-left: 0;
+		margin-right: auto;
 
 		@include media-1300 {
 			flex-basis: 100%;
 			order: 1;
+			margin-right: 0;
 		}
 
 		&__list {
