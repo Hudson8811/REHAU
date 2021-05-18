@@ -213,12 +213,13 @@
                 
             }
         }
-
         &__btn {
             max-width: 155px;
             padding-right: 15px;
             padding-left: 20px;
-
+            &:hover:before{
+                left: -45px;
+                }
             @include tablet {
                 margin-top: 20px;
             }
