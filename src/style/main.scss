@@ -8,11 +8,10 @@
 
 
 /* my style */
-
+@import "partials/mixin";
 @import "partials/_var"; 
 @import "partials/chexbox"; 
 @import "partials/button"; 
-@import "partials/mixin";
 @import "partials/components";
 @import "partials/header";
 @import "partials/main";

@@ -61,7 +61,7 @@
 
         @include tablet {
             width: 50%;
-            height: 314px;
+            height: 316px;
         }
 
         @include mobile{
@@ -107,7 +107,7 @@
         }
 
         &-text {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 17px;
             margin-top: 8px;
         }

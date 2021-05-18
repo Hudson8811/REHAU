@@ -76,6 +76,9 @@ input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:after{
     border-left: 4px solid #DD0060;
     border-bottom: 4px solid #DD0060;
     transform: rotate(-45deg);
+    @include tablet{
+        top: 2px;
+    }
 }
 input[type="checkbox"]:not(:checked) + label:after{
 

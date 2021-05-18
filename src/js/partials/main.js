@@ -17,22 +17,8 @@ $(document).ready(function () {
   } catch (e) {
       console.log(e.message)
   }
-  const videos = $('.video__item-video iframe')
-  const videoImg = $('.video__item-img')
-  const videoInfo = $('.video__item-wrap')
-  const videoBtn = $('.video__button')
-
-  $(videoBtn).each(function(idx, item) {
-    $(item).on('click', () => {
-      console.log(idx);
-      const src = $(videos).eq(idx).attr('src')
-      $(videoBtn).eq(idx).css('display', 'none')
-      $(videoInfo).eq(idx).css('display', 'none')
-      $(videoImg).eq(idx).css('display', 'none')
-      $(videos).eq(idx).attr('src', src + '?autoplay=1');
-    })
-  })
-  $('.works__item-link').fancybox()
+ 
+  $('[data-fancybox="gallery]').fancybox()
 
   if (document.querySelector('.js-form')) {
       new JustValidate('.js-form', {
@@ -130,7 +116,42 @@ $(document).ready(function () {
        }
 
      }
+     const videos = $('.video__item-video iframe')
+     const videoImg = $('.video__item-img')
+     const videoInfo = $('.video__item-wrap')
+     const videoBtn = $('.video__button')
+   
+     $(videoBtn).each(function(idx, item) {
+       $(item).on('click', () => {
+         const src = $(videos).eq(idx).attr('src')
+         $(videoBtn).eq(idx).css('display', 'none')
+         $(videoInfo).eq(idx).css('display', 'none')
+         $(videoImg).eq(idx).css('display', 'none')
+         videoStart()
+       })
+     })
+     //
+     function videoStart() {
 
+      var youtube = document.querySelectorAll( ".video__item-video" );
+      
+      for (var i = 0; i < youtube.length; i++) {
+        
+        var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
+        
+
+          var iframe = document.createElement( "iframe" );
+
+              iframe.setAttribute( "frameborder", "0" );
+              iframe.setAttribute( "allowfullscreen", "" );
+              iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ youtube[i].dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+
+              youtube[i].innerHTML = "";
+              youtube[i].appendChild( iframe );
+      };
+      
+    }
+    //
      const checkWidth = () => {
       const media = window.matchMedia("(max-width: 767px)");
   

@@ -270,13 +270,13 @@
         }
         &__subtitle{
             margin-bottom: 10px;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 17px;
             color: #5F5F5F;
 
             @include tablet {
                 font-size: 12px;
-                line-height: 14px;
+                line-height: 16px;
             }
         }
         &__name{
@@ -287,7 +287,7 @@
 
             @include tablet {
                 font-size: 12px;
-                line-height: 14px;
+                line-height: 16px;
             }
         }
         &__adress{
