@@ -1,13 +1,20 @@
 footer.footer
 	.container
 		div.footer__inner 
-			img.footer__logo.logo(src="img/logo.svg", alt="REHAU")
-			nav.footer__list 
-				a.footer__list-item(href="#") Услуги
-				a.footer__list-item(href="#") Наши работы
-				a.footer__list-item(href="#") Стоимость работ
-				a.footer__list-item(href="#") Контакты
-				a.footer__list-item(href="#") Оставить заявку
+			a.footer__logo-link(href="/")
+				img.footer__logo.logo(src="img/logo.svg", alt="REHAU") 
+			nav.footer-nav 
+				ul.footer-nav__list
+					li.footer-nav__item
+						a(href="#") Услуги
+					li.footer-nav__item
+						a(href="#") Наши работы
+					li.footer-nav__item
+						a(href="#") Стоимость работ
+					li.footer-nav__item
+						a(href="#") Контакты
+					li.footer-nav__item
+						a(href="#") Оставить заявку 
 			div.footer__info
 				span.footer__info-copywriting 
 					| 2021 © Все права защищены авторским правом
