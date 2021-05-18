@@ -4,8 +4,8 @@ $(document).ready(function () {
       arrows:true,
       dots: true,
       adaptiveHeight: true,
-      prevArrow:'<button class="hero-slider__prev"><img src="img/hero/slider-arrow.svg"></button>',
-      nextArrow:'<button class="hero-slider__next"><img src="img/hero/slider-arrow.svg"></button>',
+      prevArrow:'.hero-slider__prev',
+      nextArrow:'.hero-slider__next',
       dotsClass: 'hero-slider__pagination',
       customPaging : function(slider, i) {
          return '<div class="hero-slider__pagin"></div>'
