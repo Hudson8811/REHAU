@@ -70,13 +70,19 @@
 		z-index: 101;
 		background: #fff;
 	}
+
 	&__inner{
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 	&__logo {
-		margin-right: 40px;
+
+		&-link {
+			display: inline-block;
+			flex-shrink: 0;
+			margin-right: 40px;
+		}
 	}
 
 	&-wrapper {
