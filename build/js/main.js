@@ -84,7 +84,8 @@ $(document).ready(function () {
 $(document).ready(function () {
 	$('.sh-burger').click(function () {
 		$(this).toggleClass('sh-burger--active');
-		$('.sh-menu-wrap').toggleClass('sh-menu-wrap--open');
+		$('.header-nav').toggleClass('header-nav--active');
+		$('.header-wrapper').toggleClass('header-wrapper--active');
 		$('body').toggleClass('compensate-for-scrollbar')
 	});
 

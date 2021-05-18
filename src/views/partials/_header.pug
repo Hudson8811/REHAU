@@ -2,38 +2,28 @@ header.header
 	.container
 		div.header__inner 
 			img.header__logo.logo(src="img/logo.svg", alt="REHAU")
-			nav.header__list 
-				a.header__list-item(href="#") Услуги
-				a.header__list-item(href="#") Наши работы
-				a.header__list-item(href="#") Стоимость работ
-				a.header__list-item(href="#") Контакты
-				a.header__list-item(href="#") Оставить заявку
-			div.header__contacts
-				div.header__contacts-item 
-					img(src="img/contacts/pin.svg", alt="") 
-					| г. Москва, ул. Народная 8, оф. 33
-				div.header__contacts-item 
-					img(src="img/contacts/clock.svg", alt="") 
-					| Пн-Вс: 9:00 - 21:00
-				a.header__contacts-item(href="tel:+74957698628") 
-					img(src="img/contacts/phone.svg", alt="") 
-					| +7(495) 769-86-28
+			.header-wrapper 
+				nav.header-nav
+					ul.header-nav__list 
+						li.header-nav__item
+							a(href="#") Услуги
+						li.header-nav__item
+							a(href="#") Наши работы
+						li.header-nav__item
+							a(href="#") Стоимость работ
+						li.header-nav__item
+							a(href="#") Контакты
+						li.header-nav__item
+							a(href="#") Оставить заявку
+				div.header__contacts
+					div.header__contacts-item 
+						img(src="img/contacts/pin.svg", alt="") 
+						| г. Москва, ул. Народная 8, оф. 33
+					div.header__contacts-item 
+						img(src="img/contacts/clock.svg", alt="") 
+						| Пн-Вс: 9:00 - 21:00
+					a.header__contacts-item(href="tel:+74957698628") 
+						img(src="img/contacts/phone.svg", alt="") 
+						| +7(495) 769-86-28
 			.sh-burger
 				span
-.sh-menu-wrap
-	nav.header__list--mobile
-		a.header__list-item(href="#") Услуги
-		a.header__list-item(href="#") Наши работы
-		a.header__list-item(href="#") Стоимость работ
-		a.header__list-item(href="#") Контакты
-		a.header__list-item(href="#") Оставить заявку
-	div.header__contacts--mobile
-		div.header__contacts-item 
-			img(src="img/contacts/pin.svg", alt="") 
-			| г. Москва, ул. Народная 8, оф. 33
-		div.header__contacts-item 
-			img(src="img/contacts/clock.svg", alt="") 
-			| Пн-Вс: 9:00 - 21:00
-		a.header__contacts-item(href="tel:+74957698628") 
-			img(src="img/contacts/phone.svg", alt="") 
-			| +7(495) 769-86-28
