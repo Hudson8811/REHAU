@@ -76,6 +76,7 @@ img.fnone {
     top: 50%;
     right: -13px;
     transform: translateY(50%);
+    pointer-events: none;
 }
 .ddcommon .ddArrow:hover {
     background-position: 0 100%;
