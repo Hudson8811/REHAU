@@ -23,14 +23,14 @@
                 h3.hero__form-title Оставьте заявку на услугу
                 p.hero__form-subtitle И наш специалист свяжется с вами в самое ближайшее время
                 form.hero__form-form.hero-form.js-form(action="#") 
-                    input.hero-form__name(placeholder="Ваше имя",type="text", data-validate-field="name")
-                    input.hero-form__phone(placeholder="Ваш телефон",type="phone", data-validate-field="phone")
+                    input.hero-form__name.iscomplete(placeholder="Ваше имя",type="text", data-validate-field="name")
+                    input.hero-form__phone.iscomplete(placeholder="Ваш телефон",type="phone", data-validate-field="phone")
                     select.hero-form__select(name="dd" id="dd")
                                 option(value="1", disabled, selected, hidden) Какая услуга интересует?
                                 option(value="2") Какая услуга интересует?
                                 option(value="3") Какая услуга интересует?
                                 option(value="4") Какая услуга интересует?
-                    textarea.hero-form__textarea(name="", placeholder="Сообщение", data-validate-field="text")
+                    textarea.hero-form__textarea.iscomplete(name="", placeholder="Сообщение", data-validate-field="text")
                     .hero-form__wrap 
                         input#cb2.hero-form__checkbox(type="checkbox", name="cb2", data-validate-field="checkbox")
                         label.hero-form__label(for="cb2") 

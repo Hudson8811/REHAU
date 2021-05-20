@@ -33,7 +33,7 @@ input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:before{
     transform: translateY(-50%);
     width: 18px;
     height: 18px;
-    border: 1px solid $primary;
+    border: 1px solid #000;
     background-color: #FFF;
 }
 
@@ -82,4 +82,18 @@ input[type="checkbox"]:not(:checked) + label:after{
 input[type="checkbox"]:checked + label:after{
 
     opacity: 1;
+}
+.error::before{
+    border: 1px solid red !important;
+}
+.complete::before{
+    border: 1px solid green !important;
+}
+.hero__form-form{
+    >.dd.error{
+        border: 1px solid red;
+    }
+    >.dd.complete{
+        border: 1px solid green;
+    }
 }

@@ -328,10 +328,39 @@ $(document).ready(function () {
   }
   $('.info-form__btn').on('click', function(){
     if(!$('.info-form__checkbox').prop('checked')){
-      console.log(1);
-      $('label.info-form__label').addClass('js-validate-error-field')
+      $('.info-form__label').addClass('error')
     } else {
-      $('label.info-form__label').removeClass('js-validate-error-field')
+      $('.info-form__label').removeClass('error')
     }
  })
+ //
+ $('.hero-form__btn').on('click', function(){
+  if(!$('.hero-form__checkbox').prop('checked')){
+    $('.hero-form__label').addClass('error')
+  } else {
+    $('.hero-form__label').removeClass('error')
+  }
+  console.log($('.hero-form__select').val());
+  console.log( null === null);
+  if ($('.hero-form__select').val() === null) {
+    $('.dd').addClass('error')
+  } else {
+    $('.dd').removeClass('error').addClass('complete')
+  }
+})
+//
+ $('.info-form__checkbox').on('change', function(){
+  if($('.info-form__checkbox').prop('checked')){
+    $('.info-form__label').removeClass('error').addClass('complete')
+  } else {
+    $('.info-form__label').addClass('error').removeClass('complete')
+  }})
+  //
+  $('.hero-form__checkbox').on('change', function(){
+    if($('.hero-form__checkbox').prop('checked')){
+      $('.hero-form__label').removeClass('error').addClass('complete')
+    } else {
+      $('.hero-form__label').addClass('error').removeClass('complete')
+    }
+  })
 });
