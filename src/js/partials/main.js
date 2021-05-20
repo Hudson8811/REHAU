@@ -45,6 +45,9 @@ $(document).ready(function () {
               required: true,
 
             },
+            select: {
+              required: true
+            },
           messages: {
             name: {
               minLength: 'My custom message about only minLength rule'
@@ -54,6 +57,40 @@ $(document).ready(function () {
           },
       })
   }
+  if (document.querySelector('.js-form-info')) {
+    new JustValidate('.js-form-info', {
+        rules: {
+          checkbox: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          name: {
+            required: true,
+            minLength: 2
+          },
+          phone:{
+            required: true,
+            minLength: 17,
+          },
+          text:{
+            required: true,
+
+          },
+          select: {
+            required: true
+          },
+        messages: {
+          name: {
+            minLength: 'My custom message about only minLength rule'
+          },
+          email: 'My custom message about error (one error message for all rules)'
+        },  
+        },
+    })
+}
   if ($('.video__wrapper')) {
     var $msnry;
     const videoWrapper = document.querySelector('.video__wrapper');
