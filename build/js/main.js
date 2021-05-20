@@ -146,7 +146,7 @@ $(document).ready(function () {
       console.log(e.message)
   }
  
-  $('[data-fancybox="gallery]').fancybox()
+  $('[data-fancybox=gallery]').fancybox()
 
   if (document.querySelector('.js-form')) {
       new JustValidate('.js-form', {

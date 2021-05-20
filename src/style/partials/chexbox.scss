@@ -68,10 +68,10 @@ input[type="checkbox"]:not(:checked) + label:after{
 input.hero-form__checkbox[type="checkbox"]:checked + label:after,
 input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:after{
 
-    top: 13px;
+    top: 15px;
 
     @include tablet{
-        top: 2px;
+        top: 5px;
     }
 }
 input[type="checkbox"]:not(:checked) + label:after{
