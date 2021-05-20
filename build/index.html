@@ -58,15 +58,15 @@
               <h3 class="hero__form-title">Оставьте заявку на услугу</h3>
               <p class="hero__form-subtitle">И наш специалист свяжется с вами в самое ближайшее время</p>
               <form class="hero__form-form hero-form js-form" action="#"> 
-                <input class="hero-form__name" placeholder="Ваше имя" type="text" data-validate-field="name">
-                <input class="hero-form__phone" placeholder="Ваш телефон" type="phone" data-validate-field="phone">
+                <input class="hero-form__name" name="user_name" placeholder="Ваше имя" type="text" data-validate-field="name">
+                <input class="hero-form__phone" name="user_phone" placeholder="Ваш телефон" type="phone" data-validate-field="phone">
                 <select class="hero-form__select" name="dd" id="dd">
                   <option value="1" disabled selected hidden>Какая услуга интересует?</option>
                   <option value="2">Какая услуга интересует?</option>
                   <option value="3">Какая услуга интересует?</option>
                   <option value="4">Какая услуга интересует?</option>
                 </select>
-                <textarea class="hero-form__textarea" name="" placeholder="Сообщение" data-validate-field="text"></textarea>
+                <textarea class="hero-form__textarea" name="msg" placeholder="Сообщение" data-validate-field="text"></textarea>
                 <div class="hero-form__wrap"> 
                   <input class="hero-form__checkbox" id="cb2" type="checkbox" name="cb2" data-validate-field="checkbox">
                   <label class="hero-form__label" for="cb2">
@@ -316,9 +316,9 @@
               <h2 class="info__contacts-form__title">Закажите бесплатную консультацию</h2>
               <form class="info-form info__contacts-form__form js-form-info">
                 <div class="info-form__wrap">
-                  <input class="info-form__name" placeholder="Ваше имя" type="text" data-validate-field="name">
-                  <input class="info-form__email" type="text" placeholder="Email" data-validate-field="email">
-                  <input class="info-form__phone" type="phone" placeholder="Телефон" data-validate-field="phone">
+                  <input class="info-form__name" name="user_name" placeholder="Ваше имя" type="text" data-validate-field="name">
+                  <input class="info-form__email" name="user_email" type="text" placeholder="Email" data-validate-field="email">
+                  <input class="info-form__phone" name="user_phone" type="phone" placeholder="Телефон" data-validate-field="phone">
                 </div>
                 <textarea class="info-form__msg" name="msg" placeholder="Сообщение" data-validate-field="text"></textarea>
                 <div class="info-form__checkbox-wrap">
