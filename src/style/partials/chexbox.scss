@@ -55,27 +55,21 @@ input[type="checkbox"]:not(:checked) + label:after{
 input[type="checkbox"]:checked + label:after,
 input[type="checkbox"]:not(:checked) + label:after{
 
-    left: 3px;
+    left: 4px;
     top: 4px;
     width: 10px;
-    height: 5px;
+    height: 6px;
     border-radius: 1px;
-    border-left: 4px solid #DD0060;
-    border-bottom: 4px solid #DD0060;
+    border-left: 2px solid #dd0060;
+    border-bottom: 2px solid #dd0060;
     transform: rotate(-45deg);
 }
 
 input.hero-form__checkbox[type="checkbox"]:checked + label:after,
 input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:after{
 
-    left: 3px;
-    top: 14px;
-    width: 10px;
-    height: 5px;
-    border-radius: 1px;
-    border-left: 4px solid #DD0060;
-    border-bottom: 4px solid #DD0060;
-    transform: rotate(-45deg);
+    top: 13px;
+
     @include tablet{
         top: 2px;
     }
