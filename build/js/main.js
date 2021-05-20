@@ -340,14 +340,19 @@ $(document).ready(function () {
   } else {
     $('.hero-form__label').removeClass('error')
   }
-  console.log($('.hero-form__select').val());
-  console.log( null === null);
   if ($('.hero-form__select').val() === null) {
     $('.dd').addClass('error')
   } else {
     $('.dd').removeClass('error').addClass('complete')
   }
 })
+//
+$('.hero-form__select').on('change', function(){
+  if($('.hero-form__select').val() === null){
+    $('.info-form__label').removeClass('complete').addClass('error')
+  } else {
+    $('.info-form__label').addClass('complete').removeClass('error')
+  }})
 //
  $('.info-form__checkbox').on('change', function(){
   if($('.info-form__checkbox').prop('checked')){
@@ -361,6 +366,15 @@ $(document).ready(function () {
       $('.hero-form__label').removeClass('error').addClass('complete')
     } else {
       $('.hero-form__label').addClass('error').removeClass('complete')
+    }
+  })
+  //
+  $('input').on('keyup', function () {
+    if($(this).hasClass('js-validate-error-field')){
+      $(this).addClass('iscomplete')
+    } else {
+      $(this).removeClass('iscomplete')
+      
     }
   })
 });
