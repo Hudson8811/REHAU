@@ -6,6 +6,8 @@
 //= libs/dd.min.js
 //= libs/just-validate.min.js
 //= libs/masonry.min.js
+//= libs/mask.js
+
 
 
 /* my scripts */

@@ -1,5 +1,8 @@
 $(document).ready(function () {
-   $('.hero-slider').slick({
+  maskPhone('.info-form__phone')
+  maskPhone('.hero-form__phone')
+  
+  $('.hero-slider').slick({
       draggable: false,
       arrows:true,
       dots: true,
@@ -36,7 +39,7 @@ $(document).ready(function () {
             },
             phone:{
               required: true,
-              phone: '123-123-123'
+              minLength: 17,
             },
             text:{
               required: true,
@@ -51,7 +54,6 @@ $(document).ready(function () {
           },
       })
   }
-  
   if ($('.video__wrapper')) {
     var $msnry;
     const videoWrapper = document.querySelector('.video__wrapper');
@@ -161,7 +163,14 @@ $(document).ready(function () {
     };
   
     checkWidth();
- }
-
+  }
+  $('.info-form__btn').on('click', function(){
+    if(!$('.info-form__checkbox').prop('checked')){
+      console.log(1);
+      $('label.info-form__label').addClass('js-validate-error-field')
+    } else {
+      $('label.info-form__label').removeClass('js-validate-error-field')
+    }
+ })
 });
 

@@ -57,18 +57,18 @@
             <div class="hero__form">
               <h3 class="hero__form-title">Оставьте заявку на услугу</h3>
               <p class="hero__form-subtitle">И наш специалист свяжется с вами в самое ближайшее время</p>
-              <form class="hero__form-form hero-form" action="#"> 
-                <input class="hero-form__name" placeholder="Ваше имя" type="text">
-                <input class="hero-form__phone" placeholder="Ваш телефон" type="phone">
+              <form class="hero__form-form hero-form js-form" action="#"> 
+                <input class="hero-form__name" placeholder="Ваше имя" type="text" data-validate-field="name">
+                <input class="hero-form__phone" placeholder="Ваш телефон" type="phone" data-validate-field="phone">
                 <select class="hero-form__select" name="dd" id="dd">
                   <option value="1" disabled selected hidden>Какая услуга интересует?</option>
                   <option value="2">Какая услуга интересует?</option>
                   <option value="3">Какая услуга интересует?</option>
                   <option value="4">Какая услуга интересует?</option>
                 </select>
-                <textarea class="hero-form__textarea" name="" placeholder="Сообщение"></textarea>
+                <textarea class="hero-form__textarea" name="" placeholder="Сообщение" data-validate-field="text"></textarea>
                 <div class="hero-form__wrap"> 
-                  <input class="hero-form__checkbox" id="cb2" type="checkbox" name="cb2" required>
+                  <input class="hero-form__checkbox" id="cb2" type="checkbox" name="cb2" data-validate-field="checkbox">
                   <label class="hero-form__label" for="cb2">
                      Доверяю свои <br><a href="#">персональные данные</a></label>
                   <button class="hero-form__btn btn"> 
