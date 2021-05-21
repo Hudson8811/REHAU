@@ -20,6 +20,14 @@
                         | Заказать звонок
                         img(src="img/btn-arrow.svg", alt="")
             .hero__form
+                .hero__popup.hero__popup--success
+                    .hero__popup-content
+                        img(src="img/success.svg", alt="").hero__popup-image
+                        h4.hero__popup-title Ваша заявка отправлена
+                .hero__popup.hero__popup--error
+                    .hero__popup-content
+                        img(src="img/error.svg", alt="").hero__popup-image
+                        h4.hero__popup-title Произошла ошибка
                 h3.hero__form-title Оставьте заявку на услугу
                 p.hero__form-subtitle И наш специалист свяжется с вами в самое ближайшее время
                 form.hero__form-form.hero-form.js-form(action="#") 
@@ -36,7 +44,7 @@
                         label.hero-form__label(for="cb2") 
                             | Доверяю свои <br>
                             a(href="#") персональные данные
-                        button.hero-form__btn.btn 
+                        button.hero-form__btn.btn
                             .btn__content 
                                 | Отправить
                                 img(src="img/btn-arrow.svg", alt="")
