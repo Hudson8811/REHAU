@@ -1,6 +1,17 @@
 .price{
     padding-top: 112px;
     padding-bottom: 56px;
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 33px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
     &__inner{
         display: flex;
         margin-top: 52px;

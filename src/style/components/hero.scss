@@ -265,7 +265,7 @@
             }
 
             @include mobile {
-                display: none;
+                display: none !important;
             }
         }
         &__next{
@@ -305,7 +305,7 @@
             }
 
             @include mobile {
-                display: none;
+                display: none !important;
             }
         }
         &__pagination{

@@ -17,6 +17,7 @@
     }
     &__inner{
         margin-top: 50px;
+        position: relative;
 
         @include tablet {
             margin-top: 40px;
@@ -164,6 +165,7 @@
         @include mobile{
             display: block;
         }
+
     }
     &-slider{
         &__prev{
@@ -178,6 +180,11 @@
             align-items: center;
             justify-content: center;
             transform: rotate(90deg);
+            display: none;
+
+            @include mobile {
+                display: flex;
+            }
 
         }
         &__next{
@@ -192,6 +199,11 @@
             align-items: center;
             justify-content: center;
             transform: rotate(-90deg);
+            display: none;
+
+            @include mobile {
+                display: flex;
+            }
         }
         &__pagination{
             list-style: none;

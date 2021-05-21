@@ -1,24 +1,54 @@
 .advantage{
     padding-top: 68px;
     padding-bottom: 56px;
+
+    @include tablet {
+        padding-top: 65px;
+        padding-bottom: 33px;
+    }
+
+    @include mobile {
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
     &__items{
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 100px;
+
+        @include tablet {
+            margin-top: 40px;
+        }
+
+        @include mobile {
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
     }
     &__item{
         display: flex;
         flex-direction: column;
         width: 308px;
         height: 170px;
+
         @include media-1400{
             flex-basis: 49%;
         }
+
         @include mobile{
             flex-basis: 100%;
+            height: auto;
         }
+
+        &:not(:first-child) {
+            @include mobile {
+                margin-top: 20px;
+            }
+        }
+
         &-wrap{
             display: flex;
             align-items: flex-start;
@@ -28,16 +58,32 @@
             font-size: 18px;
             line-height: 22px;
             margin-top: 6px;
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 17px;
+                font-weight: normal;
+            }
         }
         &-img{
             margin-right: 15px;
             height: 70px;
+
+            @include mobile {
+                width: 41px;
+                height: 41px;
+                object-fit: contain;
+            }
         }
         &-text{
             margin-top: 20px;
             font-size: 16px;
             line-height: 17px;
             color: #505050;
+
+            @include mobile {
+                display: none;
+            }
         }   
     }
 }

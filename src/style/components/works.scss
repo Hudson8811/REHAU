@@ -1,12 +1,32 @@
 .works{
     padding-top: 56px;
     padding-bottom: 112px;
+
+    @include tablet {
+        padding-top: 32px;
+        padding-bottom: 65px;
+    }
+
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
     &__wrap{
         display: flex;
         align-content: space-between;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 50px;
+
+        @include tablet {
+            margin-top: 40px;
+
+        }
+
+        @include mobile {
+            margin-top: 30px;
+        }
     }
     &__item{
             position: relative;
@@ -60,7 +80,6 @@
                 padding: 30px;
                 position: relative;
                 overflow: hidden;
-                
 
                 &:before{
                     content: '';

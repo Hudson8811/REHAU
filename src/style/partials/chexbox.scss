@@ -18,7 +18,8 @@ input[type="checkbox"]:not(:checked) + label:before{
     content: "";
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 18px;
     height: 18px;
     border: 1px solid #ffffff;

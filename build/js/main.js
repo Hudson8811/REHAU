@@ -273,8 +273,8 @@ $(document).ready(function () {
         dots: true,
         infinite: false,
         adaptiveHeight: true,
-        prevArrow:'<button class="video-slider__prev"><img src="img/hero/slider-arrow.svg"></button>',
-        nextArrow:'<button class="video-slider__next"><img src="img/hero/slider-arrow.svg"></button>',
+        prevArrow:'.video-slider__prev',
+        nextArrow:'.video-slider__next',
         dotsClass: 'video-slider__pagination',
         customPaging : function(slider, i) {
           videoSlider = slider;

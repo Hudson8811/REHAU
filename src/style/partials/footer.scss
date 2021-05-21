@@ -1,6 +1,10 @@
 .footer{
 	padding-top: 28px;
 	padding-bottom: 28px;
+
+	@include mobile {
+		padding: 50px 0;
+	}
 	&__inner{
 		display: flex;
 		align-items: center;
@@ -74,6 +78,12 @@
 
 				@include mobile {
 					margin-right: 0;
+				}
+			}
+
+			&:not(:first-child) {
+				@include mobile {
+					margin-top: 20px;
 				}
 			}
 
