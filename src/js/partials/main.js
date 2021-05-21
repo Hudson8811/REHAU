@@ -1,6 +1,7 @@
 $(document).ready(function () {
-  maskPhone('.info-form__phone')
-  maskPhone('.hero-form__phone')
+  maskPhone('.info-form__phone');
+  maskPhone('.hero-form__phone');
+  maskPhone('.order-popup-form__phone');
   
   $('.hero-slider').slick({
       draggable: false,
@@ -81,6 +82,37 @@ $(document).ready(function () {
           },
           select: {
             required: true
+          },
+        messages: {
+          name: {
+            minLength: 'My custom message about only minLength rule'
+          },
+          email: 'My custom message about error (one error message for all rules)'
+        },  
+        },
+    })
+}
+  if (document.querySelector('.js-form-order-popup')) {
+    new JustValidate('.js-form-order-popup', {
+        rules: {
+          checkbox: {
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          name: {
+            required: true,
+            minLength: 2
+          },
+          phone:{
+            required: true,
+            minLength: 17,
+          },
+          text:{
+            required: true,
+
           },
         messages: {
           name: {
@@ -208,6 +240,13 @@ $(document).ready(function () {
       $('.info-form__label').removeClass('error')
     }
  })
+  $('.order-popup-form__btn').on('click', function(){
+    if(!$('.order-popup-form__checkbox').prop('checked')){
+      $('.order-popup-form__label').addClass('error')
+    } else {
+      $('.order-popup-form__label').removeClass('error')
+    }
+ })
  //
  $('.hero-form__btn').on('click', function(){
   if(!$('.hero-form__checkbox').prop('checked')){
@@ -235,6 +274,13 @@ $('.hero-form__select').on('change', function(){
   } else {
     $('.info-form__label').addClass('error').removeClass('complete')
   }})
+
+ $('.order-popup-form__checkbox').on('change', function(){
+  if($('.order-popup-form__checkbox').prop('checked')){
+    $('.order-popup-form__label').removeClass('error').addClass('complete')
+  } else {
+    $('.order-popup-form__label').addClass('error').removeClass('complete')
+  }})
   //
   $('.hero-form__checkbox').on('change', function(){
     if($('.hero-form__checkbox').prop('checked')){
@@ -244,12 +290,38 @@ $('.hero-form__select').on('change', function(){
     }
   })
   //
-  $('input').on('keyup', function () {
+  $('input').on('input', function () {
     if($(this).hasClass('js-validate-error-field')){
       $(this).addClass('iscomplete')
     } else {
       $(this).removeClass('iscomplete')
-      
+    }
+  });
+  $('textarea').on('input', function () {
+    if($(this).hasClass('js-validate-error-field')){
+      $(this).addClass('iscomplete')
+    } else {
+      $(this).removeClass('iscomplete')
+    }
+  });
+
+  const orderPopup = $('.order-popup__overlay');
+
+  $('button[data-popup=order]').each(function() {
+    $('button[data-popup=order] ').on('click', () => {
+
+      if (!orderPopup.hasClass('active')) {
+        orderPopup.addClass('active');
+      }
+    });
+  });
+
+  $(orderPopup).on('click', function(event) {
+
+    const target = event.target;
+
+    if (orderPopup.hasClass('active') && $('.order-popup__overlay').is(target) || target.closest('.order-popup__close')) {
+      orderPopup.removeClass('active');
     }
   })
 });

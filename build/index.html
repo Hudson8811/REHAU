@@ -49,7 +49,7 @@
             <div class="hero__info">
               <h1 class="hero__info-title">Занимаемся монтажом труб REHAU вот уже более 5 лет </h1>
               <p class="hero__info-text">В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг. В нашем портфолио десятки качественных работ и довольных клиентов. В нашей команде только опытные специалисты, которые готовы помочь вам в оказании сантехнических услуг.</p>
-              <button class="hero__info-btn btn"> 
+              <button class="hero__info-btn btn" data-popup="order">
                 <div class="btn__content">
                    Заказать звонок<img src="img/btn-arrow.svg" alt=""></div>
               </button>
@@ -266,7 +266,7 @@
                   <li class="other__list-item"> <span>дальнейшее развитие различных форм </span></li>
                 </ul>
                 <div class="other__item-info"> <span class="other__item-price">от 900 ₽/час</span>
-                  <button class="other__item-btn btn"> 
+                  <button class="other__item-btn btn" data-popup="order"> 
                     <div class="btn__content">
                        Заказать<img src="img/btn-arrow.svg" alt=""></div>
                   </button>
@@ -283,7 +283,7 @@
                   <li class="other__list-item"> <span>дальнейшее развитие различных форм </span></li>
                 </ul>
                 <div class="other__item-info"><span class="other__item-price">от 900 ₽/час</span>
-                  <button class="other__item-btn btn"> 
+                  <button class="other__item-btn btn" data-popup="order"> 
                     <div class="btn__content">
                        Заказать<img src="img/btn-arrow.svg" alt=""></div>
                   </button>
@@ -301,7 +301,7 @@
                   <li class="other__list-item"> <span>новая модель организационной деятельности позволяет выполнять важные задания поразработке системы обучения кадров,  соответствуетнасущным потребностям. </span></li>
                 </ul>
                 <div class="other__item-info"> <span class="other__item-price">от 900 ₽/час</span>
-                  <button class="other__item-btn btn"> 
+                  <button class="other__item-btn btn" data-popup="order"> 
                     <div class="btn__content">
                        Заказать<img src="img/btn-arrow.svg" alt=""></div>
                   </button>
@@ -356,6 +356,29 @@
           </div>
         </div>
       </section>
+      <div class="order-popup"> 
+        <div class="order-popup__overlay"> 
+          <div class="order-popup__dialog"> 
+            <h3 class="title order-popup__title">Оформление заказа</h3>
+            <button class="order-popup__close"><img src="img/close.svg"></button>
+            <form class="order-popup-form order-popup__contacts-form__form js-form-order-popup">
+              <div class="order-popup-form__wrap">
+                <input class="order-popup-form__name iscomplete" placeholder="Ваше имя" type="text" data-validate-field="name">
+                <input class="order-popup-form__email iscomplete" type="text" placeholder="Email" data-validate-field="email">
+                <input class="order-popup-form__phone iscomplete" type="phone" placeholder="Телефон" data-validate-field="phone">
+                <textarea class="order-popup-form__msg iscomplete" name="msg" placeholder="Сообщение" data-validate-field="text"></textarea>
+                <div class="order-popup-form__checkbox-wrap">
+                  <input class="order-popup-form__checkbox" id="cb3" type="checkbox" name="cb3" data-validate-field="checkbox">
+                  <label class="order-popup-form__label" for="cb3">Соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
+                  <button class="order-popup-form__btn btn"> 
+                    <div class="btn__content">Заказать<img src="img/btn-arrow.svg" alt=""></div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">

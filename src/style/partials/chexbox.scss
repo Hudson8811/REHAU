@@ -36,6 +36,18 @@ input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:before{
     border: 1px solid #000;
     background-color: #FFF;
 }
+input.order-popup-form__checkbox[type="checkbox"]:checked + label:before,
+input.order-popup-form__checkbox[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    background-color: #FFF;
+}
 
 
 input[type="checkbox"]:checked + label:before,
@@ -74,6 +86,15 @@ input.hero-form__checkbox[type="checkbox"]:not(:checked) + label:after{
         top: 5px;
     }
 }
+input.order-popup-form__checkbox[type="checkbox"]:checked + label:after,
+input.order-popup-form__checkbox[type="checkbox"]:not(:checked) + label:after{
+
+    top: 5px;
+
+    @include mobile{
+        top: 13px;
+    }
+}
 input[type="checkbox"]:not(:checked) + label:after{
 
     opacity: 0;
@@ -84,14 +105,14 @@ input[type="checkbox"]:checked + label:after{
     opacity: 1;
 }
 .error::before{
-    border: 1px solid red !important;
+    border: 1px solid rgb(184, 17, 17) !important;
 }
 .complete::before{
     border: 1px solid green !important;
 }
 .hero__form-form{
     >.dd.error{
-        border: 1px solid red;
+        border: 1px solid rgb(184, 17, 17);
     }
     >.dd.complete{
         border: 1px solid green;
