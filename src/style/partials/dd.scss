@@ -187,7 +187,7 @@ img.fnone {
     padding: 0;
 }
 .dd .ddTitle .description {
-    font-size: 12px;
+    font-size: 14px;
     color: #666;
 }
 .dd .ddTitle .ddTitleText img {
@@ -222,8 +222,8 @@ img.fnone {
     color: #5F5F5F;
 
     @media (max-width: 1024px) {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 14px;
+        line-height: 16px;
     }
 }
 .dd .ddChild li.hover {
@@ -246,4 +246,14 @@ img.fnone {
 .dd .ddChild li.selected {
     background-color: #d5d5d5;
     color: #000;
+}
+
+.ddcommon {
+    .ddChild {
+        height: 206px !important;
+
+        @media (max-width: 1024px) {
+            height: 190px !important;
+        }
+    }
 }

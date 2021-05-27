@@ -25,6 +25,30 @@
         padding: 0;
         &:first-child{
             margin-right: 30px;
+
+            .price__item {
+                @include tablet {
+                    &:nth-child(odd){
+                        background: #E5E5E5;
+                    }
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            .price__head {
+                @include tablet {
+                    display: none;
+                }
+            }
+
+            .price__item {
+                @include tablet {
+                    &:nth-child(even){
+                        background: #E5E5E5;
+                    }
+                }
+            }
         }
     }
     &__head{
@@ -33,11 +57,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &--mobile{
-            @include tablet{
-                display: none;
-            }
-        }
+
         &-title{
             font-weight: bold;
             font-size: 16px;
@@ -61,8 +81,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &:nth-child(odd){
-            background: #E5E5E5;
+        @media (min-width: 1025px) {
+            &:nth-child(odd){
+                background: #E5E5E5;
+            }
         }
         &-name{
             font-size: 15px;

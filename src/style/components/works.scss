@@ -1,21 +1,20 @@
 .works{
     padding-top: 56px;
-    padding-bottom: 112px;
+    padding-bottom: 80px;
 
     @include tablet {
         padding-top: 32px;
-        padding-bottom: 65px;
+        padding-bottom: 33px;
     }
 
     @include mobile {
         padding-top: 30px;
-        padding-bottom: 60px;
+        padding-bottom: 28px;
     }
 
     &__wrap{
         display: flex;
         align-content: space-between;
-        justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 50px;
 
@@ -32,10 +31,32 @@
             position: relative;
             width: 446px;
             height: 322px;
-            flex-basis: 32%;
+            flex-basis: 31.8%;
+
+            @include media-1400 {
+                flex-basis: 31%;
+            }
+
+            &:not(:nth-child(3n + 3)){
+                margin-right: 30px;
+
+                @include tablet {
+                    margin-right: 0;
+                }
+            }
+
+            &:nth-child(odd) {
+                @include tablet {
+                    margin-right: 30px;
+                }
+
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
 
             @include tablet{
-                flex-basis: 49%;
+                flex-basis: 47%;
             }
             @include mobile{
                 flex-basis: 100%;
@@ -52,20 +73,24 @@
                 }
             }
 
-            &:nth-child(-n+3){
-                margin-bottom: 32px;
-                @include tablet{
-                    margin-bottom: 20px;
-                }
-                @include mobile{
-                    margin-bottom: 10px;
-                }
+
+            margin-bottom: 32px;
+            @include tablet{
+                margin-bottom: 20px;
             }
+            @include mobile{
+                margin-bottom: 10px;
+            }
+
             &-link{
                 >img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                }
+
+                &:not(:first-child) {
+                    display: none;
                 }
             }
 

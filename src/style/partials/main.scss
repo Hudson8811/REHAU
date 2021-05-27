@@ -60,6 +60,10 @@ body {
 	@include media-1400{
 		padding-top: 106px;
 	}
+
+	@include mobile {
+		padding-top: 70px;
+	}
 }
 
 .main {

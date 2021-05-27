@@ -69,7 +69,7 @@ input[type="checkbox"]:checked + label:after,
 input[type="checkbox"]:not(:checked) + label:after{
 
     left: 4px;
-    top: 4px;
+    top: 5px;
     width: 10px;
     height: 6px;
     border-radius: 1px;
